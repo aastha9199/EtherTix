@@ -18,6 +18,10 @@ function App() {
   const [provider, setProvider] = useState(null)
 
   const [tokenMaster, setTokenMaster] = useState(null)
+  const [occasions, setOccasions] = useState([])
+
+  const [occasion, setOccasion] = useState({})
+  const [toggle, setToggle] = useState(false)
 
   const loadBlockchainData = async () => {
 
@@ -28,6 +32,15 @@ function App() {
     const tokenMaster = new ethers.Contract(config[network.chainId].TokenMaster.address, TokenMaster, provider)
     setTokenMaster(tokenMaster)
 
+    const totalOccasions = await tokenMaster.totalOccasions()
+    const occasions = []
+
+    for (var i = 1; i <= totalOccasions; i++) {
+      const occasion = await tokenMaster.getOccasion(i)
+      occasions.push(occasion)
+    }
+
+    setOccasions(occasions)
 
     window.ethereum.on('accountsChanged', async () => {
     const accounts = await window.ethereum.request({ method: 'eth_requestAccounts' })
@@ -46,6 +59,23 @@ function App() {
       <Navigation account={account} setAccount={setAccount} />
         <h2 className="header__title"><strong>Event Tickets</strong></h2>
       </header>
+
+      <Sort />
+      <div className='cards'>
+        {occasions.map((occasion, index) => (
+          <Card
+            occasion={occasion}
+            id={index + 1}
+            tokenMaster={tokenMaster}
+            provider={provider}
+            account={account}
+            toggle={toggle}
+            setToggle={setToggle}
+            setOccasion={setOccasion}
+            key={index}
+          />
+        ))}
+      </div>
 
     </div>
   );
