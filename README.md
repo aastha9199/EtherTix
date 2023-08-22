@@ -1,6 +1,7 @@
 <p align="center">
-<img src="https://github.com/aastha9199/EtherTix/assets/78254476/0a2eb482-5805-4661-a06b-45b612d6d776" width = "656" height = "356" class="center">
+<img src="https://github.com/aastha9199/EtherTix/assets/109139737/f8e75baa-1ac2-4410-a1d3-348be7af0ad0" width = "656" height = "356" class="center">
 </p>
+
 
 <h1 align="center">EtherTix</h1>
 
@@ -12,22 +13,25 @@
 
 <table>
   <tr>
-    <td><img src = "https://github.com/aastha9199/EtherTix/assets/78254476/630d920d-0e2e-447d-8357-31dd341ed063"  width = "770" height = "420"></td>
+    <td><img src = "https://github.com/aastha9199/EtherTix/assets/109139737/510bb65c-3020-4696-affa-113cefaa8890"  width = "770" height = "420"></td>
   </tr>
+
 
 </table>
 
 
 <table>
   <tr>
-    <td><img src = "https://github.com/aastha9199/EtherTix/assets/78254476/917bb897-6b7f-4121-9472-f047b3822468"  width = "770" height = "420"></td>
+    <td><img src = "https://github.com/aastha9199/EtherTix/assets/109139737/16ddffbe-4121-4e77-88de-94f6d7e06865"  width = "770" height = "420"></td>
   </tr>
 </table>
 
+
 <table>
   <tr>
-    <td><img src = "https://github.com/aastha9199/EtherTix/assets/78254476/8f4f5b08-e129-40f8-94fa-8a9db846bec0"  width = "200" height = "420"></td>
+    <td><img src = "https://github.com/aastha9199/EtherTix/assets/109139737/1b303ca4-07b3-4469-b0fa-194793dc5c78"  width = "200" height = "420"></td>
   </tr>
+
 
 </table>
 
