@@ -15,8 +15,20 @@ import config from './config.json'
 
 function App() {
   const [account, setAccount] = useState(null)
+  const [provider, setProvider] = useState(null)
+
+  const [tokenMaster, setTokenMaster] = useState(null)
 
   const loadBlockchainData = async () => {
+
+    const provider = new ethers.providers.Web3Provider(window.ethereum)
+    setProvider(provider)
+
+    const network = await provider.getNetwork()
+    const tokenMaster = new ethers.Contract(config[network.chainId].TokenMaster.address, TokenMaster, provider)
+    setTokenMaster(tokenMaster)
+
+
     window.ethereum.on('accountsChanged', async () => {
     const accounts = await window.ethereum.request({ method: 'eth_requestAccounts' })
     const account = ethers.utils.getAddress(accounts[0])
