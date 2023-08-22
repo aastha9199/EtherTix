@@ -77,6 +77,15 @@ function App() {
         ))}
       </div>
 
+      {toggle && (
+        <SeatChart
+          occasion={occasion}
+          tokenMaster={tokenMaster}
+          provider={provider}
+          setToggle={setToggle}
+        />
+      )}
+
     </div>
   );
 }
